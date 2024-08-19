@@ -23,10 +23,10 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build .\Pictures\my_raect_app\ --configuration Release
+        run: dotnet build .\my_raect_app\ --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish .\Pictures\my_raect_app\  -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish .\my_raect_app\  -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
